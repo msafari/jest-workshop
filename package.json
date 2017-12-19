@@ -1,0 +1,91 @@
+{
+  "name": "jest-workshop",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/msafari/jest-workshop"
+  },
+  "description": "Jest Workshop",
+  "main": "dist/index.js",
+  "author": "Maedeh Safari, Torng-Lin (Taffy) Chen",
+  "license": "ISC",
+  "scripts": {
+    "start": "npm run storybook",
+    "prebuild": "rimraf dist",
+    "build": "babel src/ --out-dir dist --ignore spec.js,story.js",
+    "test": "jest src --coverage",
+    "watch": "npm t -- --watch",
+    "storybook": "start-storybook -p 9050 -c .storybook",
+    "build-storybook": "build-storybook",
+    "export-storybook": "build-storybook -c .storybook -o storybook-static",
+    "lint": "./node_modules/.bin/eslint ./src"
+  },
+  "pre-commit": {
+    "silent": false,
+    "run": [
+      "lint",
+      "test"
+    ]
+  },
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "pcln-design-system": "^1.0.0-20",
+    "prop-types": "^15.5.8",
+    "react": "^15.5.4",
+    "styled-components": "^2.1.1"
+  },
+  "devDependencies": {
+    "@storybook/addon-knobs": "^3.2.0",
+    "@storybook/addon-options": "^3.2.3",
+    "@storybook/react": "^3.2.3",
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "babel-jest": "^19.0.0",
+    "babel-loader": "^6.4.1",
+    "babel-plugin-module-resolver": "^2.7.1",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.24.1",
+    "babel-preset-es2015": "^6.13.2",
+    "babel-preset-react": "^6.11.1",
+    "css-loader": "^0.28.0",
+    "enzyme": "^2.8.2",
+    "eslint": "^4.7.2",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.3.0",
+    "eslint-plugin-jest": "^20.0.3",
+    "eslint-plugin-node": "^5.0.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-react": "^7.0.1",
+    "eslint-plugin-standard": "^3.0.1",
+    "file-loader": "^0.11.1",
+    "glob-loader": "^0.3.0",
+    "jest": "^19.0.2",
+    "jest-styled-components": "^4.9.0",
+    "pre-commit": "^1.2.2",
+    "react-addons-test-utils": "^15.5.1",
+    "react-dom": "^15.5.4",
+    "react-test-renderer": "^15.5.4",
+    "rimraf": "^2.6.2",
+    "scss-loader": "0.0.1",
+    "storybook-addon-jsx": "^4.1.1",
+    "storybook-addon-smart-knobs": "^3.0.1",
+    "storybook-readme": "^3.0.5",
+    "style-loader": "^0.16.1",
+    "webpack": "^2.3.3",
+    "webpack-dev-server": "^2.8.2"
+  },
+  "jest": {
+    "verbose": true,
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    },
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less)$": "identity-obj-proxy"
+    }
+  }
+}

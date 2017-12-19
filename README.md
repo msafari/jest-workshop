@@ -1,2 +1,8 @@
-# jest-workshop
-workshop repo for jest and snapshot testing
+## start
+`npm start`
+
+## test
+`npm test`
+
+## re-generate snapshots
+`jest -u`

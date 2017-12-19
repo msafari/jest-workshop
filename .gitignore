@@ -1,0 +1,11 @@
+*.log
+*.sw*
+.tmp
+.DS_STORE
+node_modules
+.idea/
+storybook-static.zip
+coverage
+.vscode
+dist
+package-lock.json
