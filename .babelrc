@@ -1,11 +1,49 @@
 {
-  "presets": ["env", "react"],
+  "presets": ["es2015", "env", "react"],
   "plugins": [
-    "transform-es2015-modules-commonjs"
+    "transform-es2015-modules-commonjs",
+    "transform-class-properties"
   ],
   "env": {
+    "development": {
+      "plugins": [
+        "react-hot-loader/babel"
+      ]
+    },
+    "storybook": {
+      "plugins": [
+        "transform-es2015-modules-commonjs",
+        [
+          "module-resolver",
+          {
+            "root": [
+              "."
+            ],
+            "alias": {
+              "atoms": "src/components/atoms",
+              "molecules": "src/components/molecules"
+            }
+          }
+        ]
+      ]
+    },
     "test": {
-      "plugins": ["transform-es2015-modules-commonjs"]
+      "plugins": [
+        "transform-es2015-modules-commonjs",
+        "transform-class-properties",
+        [
+          "module-resolver",
+          {
+            "root": [
+              "."
+            ],
+            "alias": {
+              "atoms": "src/components/atoms",
+              "molecules": "src/components/molecules"
+            }
+          }
+        ]
+      ]
     }
   }
 }
