@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Price Rendering 1`] = `
+.c0 {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+  line-height: 1.4;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c1 {
+  display: inline-block;
+  font-size: 12px;
+}
+
+<div
+  className="c0"
+>
+  <span
+    className="c1"
+  >
+    100
+  </span>
+</div>
+`;
