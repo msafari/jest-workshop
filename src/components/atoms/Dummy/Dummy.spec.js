@@ -6,9 +6,9 @@ let dummyObj, dummy
 
 describe('Dummy Component', () => {
   test('renders correctly with no props', () => {
-    dummyObj = (<Dummy/>)
+    dummyObj = (<Dummy />)
     dummy = render.create(dummyObj).toJSON()
-    expect(dummy).toThrow()
+    expect(console.error).toHaveBeenCalled()
   })
 
   test('renders correctly with required props', () => {

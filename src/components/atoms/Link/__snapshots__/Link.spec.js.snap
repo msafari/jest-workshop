@@ -1,8 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Link component renders correctly 1`] = `
+.c0 {
+  color: orange;
+}
+
 <a
-  className="sc-bdVaJa iWzBfR"
+  className="c0"
 >
   Click here to open 
   Priceline

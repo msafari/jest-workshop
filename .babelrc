@@ -21,7 +21,8 @@
             ],
             "alias": {
               "atoms": "src/components/atoms",
-              "molecules": "src/components/molecules"
+              "molecules": "src/components/molecules",
+              "helpers": "src/helpers"
             }
           }
         ]
@@ -39,7 +40,8 @@
             ],
             "alias": {
               "atoms": "src/components/atoms",
-              "molecules": "src/components/molecules"
+              "molecules": "src/components/molecules",
+              "helpers": "src/helpers"
             }
           }
         ]

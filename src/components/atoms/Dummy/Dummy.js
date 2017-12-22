@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import 'jest-styled-components'
 
 const propTypes = {
-  dummyProp: PropTypes.number,
+  dummyProp: PropTypes.number.isRequired,
   className: PropTypes.string
 }
 
@@ -17,7 +17,6 @@ const Dummy = ({
   className,
   dummyProp
 }) => {
-  if (!dummyProp) return null
   return (
     <StyledDummy
       className={className}
