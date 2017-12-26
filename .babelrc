@@ -22,6 +22,7 @@
             "alias": {
               "atoms": "src/components/atoms",
               "molecules": "src/components/molecules",
+              "organisms": "src/components/organisms",
               "helpers": "src/helpers"
             }
           }
@@ -41,6 +42,7 @@
             "alias": {
               "atoms": "src/components/atoms",
               "molecules": "src/components/molecules",
+              "organisms": "src/components/organisms",
               "helpers": "src/helpers"
             }
           }
