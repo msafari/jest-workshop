@@ -1,6 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Dummy Component renders correctly with required props 1`] = `
+.c1 {
+  background-color: #333;
+}
+
 .c0 {
   color: red;
   width: 100%;
@@ -11,5 +15,11 @@ exports[`Dummy Component renders correctly with required props 1`] = `
 >
   My fake dummy prop is 
   40
+  <button
+    className="c1"
+    onClick={[Function]}
+  >
+    Hey! Click on me please!
+  </button>
 </div>
 `;
