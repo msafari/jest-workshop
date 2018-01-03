@@ -19,8 +19,6 @@ function renderButtons (buttons) {
   })
 }
 
-/* Without data-unit-id */
-
 const MultipleButtons = () => {
   return (
     <div>
@@ -30,21 +28,3 @@ const MultipleButtons = () => {
 }
 
 export default MultipleButtons
-
-/* With data-unit-id */
-
-// class MultipleButtons extends Component {
-//   state = {
-//     clicked: null
-//   }
-//
-//   render () {
-//     return (
-//       <div>
-//         {renderButtons([0, 0, 0, 0])}
-//       </div>
-//     )
-//   }
-// }
-//
-// export default MultipleButtons

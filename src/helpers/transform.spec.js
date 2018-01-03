@@ -35,7 +35,7 @@ test.skip('transformHotel without rooms', () => {
   expect(result.errorMessage).toEqual('There is no rooms.')
 })
 
-test.skip('transformHotel without rooms', () => {
+test('transformHotel with rooms', () => {
   const result = transformHotel(hotel)
   expect(result.successMessage).toEqual('There are rooms.')
 })
