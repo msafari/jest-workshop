@@ -1,6 +1,7 @@
 import React from 'react'
 import render from 'react-test-renderer'
 import Dummy from '.'
+import ShallowRenderer from 'react-test-renderer/shallow'
 
 let dummyObj, dummy
 
@@ -9,6 +10,16 @@ describe('Dummy Component', () => {
     dummyObj = (<Dummy />)
     dummy = render.create(dummyObj).toJSON()
     expect(console.error).toHaveBeenCalled()
+  })
+
+  test('ShallowRenderer', () => {
+    const renderer = new ShallowRenderer()
+    dummyObj = renderer.render(<Dummy dummyProp={40}/>)
+    const dummyResult = renderer.getRenderOutput()
+    // for-demo:
+    // console.log(dummyResult)
+    expect(dummyResult.props.children[0]).toBe('My fake dummy prop is ')
+    expect(dummyResult.props.children[1]).toBe(40)
   })
 
   test('renders correctly with required props', () => {
