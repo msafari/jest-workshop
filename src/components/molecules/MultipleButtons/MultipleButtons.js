@@ -5,23 +5,26 @@ function onClick (target) {
   console.log(target)
 }
 
-function renderButtons (buttons) {
-  return buttons.map((btn, idx) => {
-    return (
-      <Button
-        key={`btn_${idx}`}
-        onClick={onClick.bind(null, `${idx + 1}_button`)}
-        buttonText={`${idx + 1}_button`}
-        dataUnitId={`NUMBER_${idx + 1}_BUTTON`}
-      />
-    )
-  })
-}
-
 const MultipleButtons = () => {
   return (
     <div>
-      {renderButtons([0, 0, 0, 0])}
+      <Button
+        buttonText='A button'
+        onClick={onClick.bind(null, 'A button')}
+      />
+      <Button
+        buttonText='B button'
+        onClick={onClick.bind(null, 'B button')}
+      />
+      {/* <Button
+        buttonText='newly added button'
+        onClick={onClick.bind(null, 'newly added button')}
+      /> */}
+      <Button
+        buttonText='C button'
+        onClick={onClick.bind(null, 'C button')}
+        // dataUnitId='C_BUTTON'
+      />
     </div>
   )
 }

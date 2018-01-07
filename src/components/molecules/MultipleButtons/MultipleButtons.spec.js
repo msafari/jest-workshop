@@ -10,7 +10,7 @@ describe('Handle Clicking using html tag name', () => {
     multipleButtonsObj = (<MultipleButtons />)
     multipleButtons = mount(multipleButtonsObj)
     multipleButtons.find('button').at(2).simulate('click')
-    expect(console.log).toHaveBeenCalledWith('3_button')
+    expect(console.log).toHaveBeenCalledWith('C button')
   })
 })
 
@@ -18,7 +18,7 @@ describe.skip('Handle Clicking using data-unit-id', () => {
   test('click on the thrid button', () => {
     multipleButtonsObj = (<MultipleButtons />)
     multipleButtons = mount(multipleButtonsObj)
-    multipleButtons.find('[data-unit-id="NUMBER_3_BUTTON"]').simulate('click')
-    expect(console.log).toHaveBeenCalledWith('3_button')
+    multipleButtons.find('[data-unit-id="C_BUTTON"]').simulate('click')
+    expect(console.log).toHaveBeenCalledWith('C button')
   })
 })
