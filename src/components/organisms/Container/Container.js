@@ -17,7 +17,7 @@ class Container extends Component {
       modalClicked: true
     })
   }
-
+  /* normal way */
   render () {
     return (
       <div>
@@ -28,6 +28,7 @@ class Container extends Component {
     )
   }
 
+  /* hacky pass theme to Modal for testing */
   // render () {
   //   return (
   //     <div>

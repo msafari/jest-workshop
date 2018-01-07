@@ -1,5 +1,4 @@
 import React from 'react'
-// import React, { Component } from 'react'
 import Button from 'atoms/Button'
 
 function onClick (target) {

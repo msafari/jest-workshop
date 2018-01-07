@@ -5,7 +5,7 @@ import MultipleButtons from '.'
 let multipleButtons, multipleButtonsObj
 console.log = jest.fn()
 
-describe('Handle Clicking', () => {
+describe('Handle Clicking using html tag name', () => {
   test('click on the thrid button', () => {
     multipleButtonsObj = (<MultipleButtons />)
     multipleButtons = mount(multipleButtonsObj)
@@ -14,7 +14,7 @@ describe('Handle Clicking', () => {
   })
 })
 
-describe.skip('Handle Clicking', () => {
+describe.skip('Handle Clicking using data-unit-id', () => {
   test('click on the thrid button', () => {
     multipleButtonsObj = (<MultipleButtons />)
     multipleButtons = mount(multipleButtonsObj)

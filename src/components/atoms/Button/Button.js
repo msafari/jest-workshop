@@ -25,9 +25,6 @@ const StyledButton = styled.button`
   background-color: #333;
 `
 
-Button.propTypes = propTypes
-export default Button
-
 /* With data-unit-id */
 
 // const Button = ({
@@ -48,5 +45,6 @@ export default Button
 // const StyledButton = styled.button`
 //   background-color: #333;
 // `
-// Button.propTypes = propTypes
-// export default Button
+
+Button.propTypes = propTypes
+export default Button

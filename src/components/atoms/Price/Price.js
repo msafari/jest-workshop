@@ -1,11 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-// import { Text } from 'pcln-design-system'
+import { Text } from 'pcln-design-system'
 
 const propTypes = {
   price: PropTypes.number.isRequired
 }
+
+/* Using styled-components with props.theme.colors */
 
 const Price = ({
   price
@@ -20,8 +22,10 @@ const Price = ({
 const PriceAmount = styled.span`
   display: inline-block;
   font-size: 12px;
-  color: ${props => props.theme.green};
-`
+  color: ${props => props.theme.colors.green};
+// `
+
+/* Using design-system Text */
 
 // const Price = ({
 //   price
@@ -37,5 +41,4 @@ const PriceAmount = styled.span`
 // }
 
 Price.propTypes = propTypes
-
 export default Price
