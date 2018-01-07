@@ -23,7 +23,7 @@ const PriceAmount = styled.span`
   display: inline-block;
   font-size: 12px;
   color: ${props => props.theme.colors.green};
-// `
+`
 
 /* Using design-system Text */
 
