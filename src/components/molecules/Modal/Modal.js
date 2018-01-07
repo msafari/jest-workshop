@@ -13,16 +13,16 @@ const Modal = ({
   theme
 }) => {
   /* Using styled-componet with props.theme.colors */
-  // return (
-  //   <Scrim>
-  //     <div
-  //       data-unit-id='MODAL_CLOSE_LINK'
-  //       onClick={onClick}
-  //     >
-  //       Click to close
-  //     </div>
-  //   </Scrim>
-  // )
+  return (
+    <Scrim>
+      <div
+        data-unit-id='MODAL_CLOSE_LINK'
+        onClick={onClick}
+      >
+        Click to close
+      </div>
+    </Scrim>
+  )
 
   /* Using dsign-system Box */
   // return (
