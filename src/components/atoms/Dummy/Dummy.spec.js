@@ -17,7 +17,7 @@ describe('Dummy Component', () => {
     dummyObj = renderer.render(<Dummy dummyProp={40}/>)
     const dummyResult = renderer.getRenderOutput()
     // for-demo:
-    // console.log(dummyResult)
+    // console.log(dummyResult.props.children)
     expect(dummyResult.props.children[0]).toBe('My fake dummy prop is ')
     expect(dummyResult.props.children[1]).toBe(40)
   })
