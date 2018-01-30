@@ -37,15 +37,11 @@ test('transformHotel with rooms, each room should have defaultCurrency', () => {
   expect(result.rooms[2].defaultCurrency).toEqual('$')
 })
 
+// Directly manipulate hotel
 test('transformHotel without rooms', () => {
   hotel.rooms = null
   const result = transformHotel(hotel)
   expect(result.errorMessage).toEqual('There is no rooms.')
-})
-
-test('transformHotel with rooms', () => {
-  const result = transformHotel(hotel)
-  expect(result.successMessage).toEqual('There are rooms.')
 })
 
 // Object.assign instead of changing the original data
@@ -55,4 +51,9 @@ test.skip('transformHotel without rooms', () => {
   })
   const result = transformHotel(noRoomsHotel)
   expect(result.errorMessage).toEqual('There is no rooms.')
+})
+
+test('transformHotel with rooms', () => {
+  const result = transformHotel(hotel)
+  expect(result.successMessage).toEqual('There are rooms.')
 })
